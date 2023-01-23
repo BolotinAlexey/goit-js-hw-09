@@ -1,4 +1,4 @@
-const TIME_FOR_CHANGIG_BACKGROUND = 1000;
+const TIME_FOR_CHANGIG_BACKGROUND = 1e3;
 const ref = {
   start: document.querySelector('[data-start]'),
   stop: document.querySelector('[data-stop]'),
@@ -11,11 +11,14 @@ ref.start.addEventListener('click', startChangeColor);
 ref.stop.addEventListener('click', stopChangeColor);
 
 function startChangeColor() {
-  intervalID = setInterval(changeBackground, TIME_FOR_CHANGIG_BACKGROUND);
+  intervalID = intervalID
+    ? intervalID
+    : setInterval(changeBackground, TIME_FOR_CHANGIG_BACKGROUND);
 }
 
 function stopChangeColor() {
-  clearInterval(intervalID);
+  intervalID = intervalID ? clearInterval(intervalID) : null;
+  console.log(intervalID);
 }
 
 function changeBackground() {
