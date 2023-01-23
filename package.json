@@ -1,4 +1,22 @@
 {
+  "name": "goit-js-hw-09",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /goit-js-hw-09/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BolotinAlexey/goit-js-hw-09.git"
+  },
+  "keywords": [],
+  "author": "Oleksii Bolotin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BolotinAlexey/goit-js-hw-09/issues"
+  },
   "devDependencies": {
     "parcel": "^2.8.3"
   }
