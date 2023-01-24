@@ -68,10 +68,9 @@ function addLeadingZero(timeObject) {
 }
 
 function timerHundler(date) {
-  currentDate = Date.now();
+  const currentDate = Date.now();
   if (date < currentDate) {
     clearInterval(intervalID);
-    console.log(intervalID);
     return;
   }
   Object.keys(ref).forEach(
