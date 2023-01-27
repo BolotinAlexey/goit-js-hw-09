@@ -18,7 +18,6 @@ function startChangeColor() {
 
 function stopChangeColor() {
   intervalID = intervalID ? clearInterval(intervalID) : null;
-  console.log(intervalID);
 }
 
 function changeBackground() {
