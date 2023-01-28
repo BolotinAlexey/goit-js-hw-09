@@ -46,3 +46,51 @@ function createPromise(position, delay) {
     }, delay)
   );
 }
+
+// Why doesn't it???
+
+// function generatorPromises({ delay, step, amount }) {
+//   startTime = Date.now();
+//   let lastPromise = createPromise(delay, 1)
+//     .then(({ position, delay }) => {
+//       console.log(
+//         `Fulfilled promise ${position} in ${delay}ms, time from start ${
+//           (Date.now() - startTime) / 1e3
+//         }`
+//       );
+//     })
+//     .catch(({ position, delay }) => {
+//       console.log(
+//         `Fulfilled promise ${position} in ${delay}ms time from start ${
+//           (Date.now() - startTime) / 1e3
+//         }`
+//       );
+//     });
+//   for (let index = 2; index <= amount; index++) {
+//     lastPromise = lastPromise.then(
+//       createPromise(index, step)
+//         .then(({ position, delay }) => {
+//           console.log(
+//             `Fulfilled promise ${position} in ${delay}ms, time from start ${
+//               (Date.now() - startTime) / 1e3
+//             }`
+//           );
+//         })
+//         .catch(({ position, delay }) => {
+//           console.log(
+//             `Fulfilled promise ${position} in ${delay}ms time from start ${
+//               (Date.now() - startTime) / 1e3
+//             }`
+//           );
+//         })
+//     );
+//   }
+// }
+
+// function createPromise(position, delay) {
+//   const shouldResolve = Math.random() > 0.3;
+//   return new Promise((resolve, reject) => {
+//     if (shouldResolve) resolve(setTimeout(() => ({ position, delay }), delay));
+//     else reject(setTimeout(() => ({ position, delay }), delay));
+//   });
+// }
