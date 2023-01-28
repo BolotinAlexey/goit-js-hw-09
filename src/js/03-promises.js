@@ -47,7 +47,7 @@ function createPromise(position, delay) {
   );
 }
 
-// Why doesn't it???
+// Why doesn't work it???
 
 // function generatorPromises({ delay, step, amount }) {
 //   startTime = Date.now();
